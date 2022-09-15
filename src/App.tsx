@@ -50,7 +50,7 @@ function App() {
     function changeTaskTitle(tasksId: string, newValue: string, toDoListId: string) {
         // достаем нужный массив по toDoListId
         const tasks = tasksObj[toDoListId];
-        //находим нужную task
+        //находим нужную tasks
         const task = tasks.find(t => t.id === tasksId)
         // изменяем task если она нашлась
         if (task) {
