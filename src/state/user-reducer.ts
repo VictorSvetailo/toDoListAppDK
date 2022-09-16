@@ -31,7 +31,6 @@ export const userReducer = (state: StateType, action: ActionType): StateType => 
             return{
                 ...state,
                 name: action.newName
-                //name:  state.name = 'Victor'
             }
         default:
             throw  new Error('I dont understand type!')

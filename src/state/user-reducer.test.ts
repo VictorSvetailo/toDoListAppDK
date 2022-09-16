@@ -1,4 +1,4 @@
-import React from 'react';
+
 import {userReducer} from './user-reducer';
 
 test('user reducer should increment only age', () => {
@@ -25,7 +25,7 @@ test('user reducer should change of name user', () => {
     const newName = 'Victor';
     const endState = userReducer(startState, {type: 'CHANGE-NAME', newName: newName})
 
-    expect(endState.name).toBe(newName);
+    expect(endState.name).toBe('Victor');
 
 // your code here
 

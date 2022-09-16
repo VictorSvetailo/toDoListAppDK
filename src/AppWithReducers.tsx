@@ -20,7 +20,7 @@ export type TasksStateType = {
 }
 
 // Components
-function App() {
+function AppWithReducers() {
     function removeTask(id: string, toDoListId: string) {
         const tasks = tasksObj[toDoListId];
         const filteredTasks = tasks.filter(t => t.id !== id)
@@ -182,4 +182,4 @@ function App() {
         ;
 }
 
-export default App;
+export default AppWithReducers;
