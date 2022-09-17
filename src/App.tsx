@@ -63,7 +63,7 @@ function App() {
 ////Sortirovka-------------------------------------
 //     let [filter, setFilter] = useState<FilterValuesType>('all');
 
-    function changeFilter(value: FilterValuesType, toDoListId: string) {
+    function changeFilter(toDoListId: string, value: FilterValuesType) {
         const toDoList = toDoLists.find(tl => tl.id === toDoListId);
         if (toDoList) {
             toDoList.filter = value;

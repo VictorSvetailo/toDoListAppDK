@@ -11,7 +11,7 @@ export type PropsAllType = {
     title: string
     tasks: Array<TaskType>
     removeTask: (id: string, toDoListId: string) => void
-    changeFilter: (value: FilterValuesType, toDoListId: string) => void
+    changeFilter: (toDoListId: string, value: FilterValuesType) => void
     addTask: (title: string, toDoListId: string) => void
     changeTaskStatus: (tasksId: string, isDone: boolean, toDoListId: string) => void
     filter: FilterValuesType
@@ -29,9 +29,9 @@ export type TaskType = {
 // Handler означает обработчик
 
 export function TodoList(props: PropsAllType) {
-    const onClickAll = (e: MouseEvent<HTMLButtonElement>) => props.changeFilter('all', props.id)
-    const onClickActive = (e: MouseEvent<HTMLButtonElement>) => props.changeFilter('active', props.id)
-    const onClickCompleted = (e: MouseEvent<HTMLButtonElement>) => props.changeFilter('completed', props.id)
+    const onClickAll = (e: MouseEvent<HTMLButtonElement>) => props.changeFilter(props.id, 'all')
+    const onClickActive = (e: MouseEvent<HTMLButtonElement>) => props.changeFilter(props.id, 'active')
+    const onClickCompleted = (e: MouseEvent<HTMLButtonElement>) => props.changeFilter(props.id, 'completed')
     const removeToDoList = () => {
         props.removeToDoList(props.id)
     }

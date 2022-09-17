@@ -120,5 +120,5 @@ export const changeTaskStatusAC = (taskID: string,
 export const changeTaskTitleAC = (taskID: string,
                                    title: string,
                                    toDoListId: string): ChangedTitleActionType => {
-    return {type: 'CHANGE-TASK-TITLE', title, toDoListId, taskID}
+    return {type: 'CHANGE-TASK-TITLE', toDoListId, taskID, title}
 }
